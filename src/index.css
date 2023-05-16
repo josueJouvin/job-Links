@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(203 213 225);
+}
+img[alt=""]::after{
+    content: "User photo";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+  
+  .postulated-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(132 204 22);
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  
+  .postulated-checkbox:before {
+    content: "";
+    background-color: rgb(132 204 22);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .postulated-checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  
+  .postulated-checkbox-label {
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
