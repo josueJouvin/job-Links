@@ -60,8 +60,8 @@ function App() {
 }, [filter, selected, links]);
 
   return (
-    <div className="flex flex-col">
-      <main className="w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12">
+    <div className="flex flex-col min-h-screen">
+      <main className="w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12 flex-1">
         <Header />
         <Filters setFilter={setFilter}/>
 
