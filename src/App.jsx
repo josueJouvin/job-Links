@@ -60,8 +60,8 @@ function App() {
 }, [filter, selected, links]);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12 flex-1">
+    <div className="flex flex-col">
+      <main className="w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12">
         <Header />
         <Filters setFilter={setFilter}/>
 
@@ -84,14 +84,14 @@ function App() {
           </div>
         </section>
 
-        {links.length ? <Links links={links} setEditarLinks={setEditarLinks} deleteLink={deleteLink} filter={filter} filterLinks={filterLinks} selected={selected}/> : <p className="text-center text-xl md:text-2xl text-slate-600 mb-3">Add links to jobs you have applied for or are interested in.</p>}
+        {links.length ? <Links links={links} setEditarLinks={setEditarLinks} deleteLink={deleteLink} filter={filter} filterLinks={filterLinks} selected={selected}/> : <p className="text-center text-xl md:text-2xl text-slate-600 mb-10">Add links to jobs you have applied for or are interested in.</p>}
         
         {
           enable && <ModalLink editUser={editUser} saveLinks={saveLinks} editarLinks={editarLinks} setEditarLinks={setEditarLinks} deleteLink={deleteLink}/>
         }
       </main>
       <footer className="text-base font-medium text-slate-600 flex flex-col md:flex-row gap-2 justify-between items-center border-t-2 py-5 w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12"> 
-          <p className="">Made with ♥ in Ecuador</p>
+          <p className="text-lg">Made with ♥ in Ecuador</p>
           <div className="flex gap-3 items-center justify-center">
             <a href="https://github.com/josueJouvin" className="flex hover:text-lime-600 items-center" target='_blank' rel="noreferrer"> 
               <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-github-filled" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
