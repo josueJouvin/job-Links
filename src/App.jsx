@@ -63,11 +63,12 @@ function App() {
     <div className="flex flex-col min-h-screen">
       <main className="w-11/12 mx-auto md:w-2/3 xl:w-3/5 2xl:w-5/12 flex-1">
         <Header />
+
         <Filters setFilter={setFilter}/>
 
         <section className="mt-10">
           <div className="flex items-center gap-2">
-              <img className="bg-lime-300 p-2 rounded-full items-center h-10 w-10" src="./src/pictures/link.png" alt="link" />
+              <img className="bg-lime-300 p-2 rounded-full items-center h-10 w-10" src="./pictures/link.png" alt="link" />
               <span className="text-xl font-bold">Links</span>
           </div>
           <div className="flex flex-row justify-between items-center mt-3 mb-8">
@@ -84,7 +85,7 @@ function App() {
           </div>
         </section>
 
-        {links.length ? <Links links={links} setEditarLinks={setEditarLinks} deleteLink={deleteLink} filter={filter} filterLinks={filterLinks} selected={selected}/> : <p className="text-center text-xl md:text-2xl text-slate-600 mb-10">Add links to jobs you have applied for or are interested in.</p>}
+        {links.length ? <Links links={links} setEditarLinks={setEditarLinks} deleteLink={deleteLink} filter={filter} filterLinks={filterLinks} selected={selected}/> : <p className="text-center text-xl md:text-2xl text-slate-600 mb-3">Add links to jobs you have applied for or are interested in.</p>}
         
         {
           enable && <ModalLink editUser={editUser} saveLinks={saveLinks} editarLinks={editarLinks} setEditarLinks={setEditarLinks} deleteLink={deleteLink}/>
