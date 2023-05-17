@@ -51,7 +51,7 @@ const Links = ({links, setEditarLinks, deleteLink, filter, filterLinks, selected
             <div className="text-center">
               <span className="text-lg font-extrabold">{link.text}</span>
               <p className="font-semibold text-center">
-                {windowWidth > 768 ? `${link.description.slice(0,45)}...` : `${link.description.slice(0,15)}...`}
+              {link.description ? (windowWidth > 768 ? `${link.description.slice(0, 45)}...` : `${link.description.slice(0, 15)}...`) : ''}
               </p>
             </div>
             <div className="flex flex-col gap-3">
