@@ -5,6 +5,12 @@
 body{
     background-color: rgb(203 213 225);
 }
+h1,h2,h3,span,a,button{
+  font-family: 'Rubik', sans-serif;
+}
+p,select{
+  font-family: 'Mukta', sans-serif;;
+}
 img[alt=""]::after{
     content: "User photo";
     display: flex;
@@ -48,7 +54,6 @@ img[alt=""]::after{
   .postulated-checkbox:checked:before {
     transform: translate(-50%, -50%) scale(1);
   }
-  
   
   .postulated-checkbox-label {
     font-size: 18px;

@@ -101,11 +101,9 @@ const ModalLink = ({editUser, saveLinks, editarLinks, setEditarLinks, deleteLink
               value={text} 
               onChange={handleText}
             />
-            <InputText
-              placeholder="Job Description" 
-              value={description} 
-              onChange={(e) => setDescription(e.target.value)}
-            />
+            <label htmlFor="desciption" className='w-full'>
+              <textarea name="description" onChange={(e) => setDescription(e.target.value)} value={description} placeholder='Job Description' className='w-full h-auto py-1 px-4 rounded-xl outline outline-lime-600 border-0 bg-gray-100 outline-offset-2 focus:outline-offset-8 focus:bg-white'></textarea>
+            </label>   
             <InputUrl
               placeholder="Vacancy link*"
               defaultValue={url} 
